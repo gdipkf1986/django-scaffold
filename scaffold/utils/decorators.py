@@ -1,6 +1,7 @@
 __author__ = 'Jovi'
 
 from django.shortcuts import HttpResponse
+from django.core.serializers.json import DjangoJSONEncoder
 import json
 
 
@@ -22,7 +23,7 @@ def log_func(log):
 def json_response(view):
     def wrapper(request, *args, **kwargs):
         json_dict = view(request, *args, **kwargs)
-        response = HttpResponse(json.dumps(json_dict))
+        response = HttpResponse(json.dumps(json_dict, cls=DjangoJSONEncoder))
         response['content-Type'] = 'application/json'
         return response
     return wrapper
