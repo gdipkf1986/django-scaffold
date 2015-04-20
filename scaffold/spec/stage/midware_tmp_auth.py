@@ -7,6 +7,7 @@ users = {
     "user-002": "55134",
 }
 
+
 class tmp_auth(object):
     def process_request(self, request):
         if request.path != '/auth_login/':
