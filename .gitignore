@@ -180,3 +180,8 @@ bower_components/
 /scaffold/my/
 /scaffold/spec/*/secret.py
 /scaffold/spec/local/
+
+###################
+## django
+###################
+.log
