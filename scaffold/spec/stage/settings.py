@@ -29,9 +29,9 @@ DATABASES = {
 
 WSGI_APPLICATION = 'scaffold.spec.stage.wsgi.application'
 
-MIDDLEWARE_CLASSES += (
-    'scaffold.spec.stage.midware_tmp_auth.tmp_auth',
-)
+# MIDDLEWARE_CLASSES += (
+#     'scaffold.spec.stage.midware_tmp_auth.tmp_auth',
+# )
 
 TEMPLATE_DIRS += (
     os.path.join(BASE_DIR, 'scaffold/spec/stage/templates'),
