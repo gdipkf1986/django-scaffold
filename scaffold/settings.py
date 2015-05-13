@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/1.6/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+import platform
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 
@@ -24,8 +25,8 @@ SECRET_KEY = 'yht+ny8mdv9^(o(33*-lr3(jm-$yecy_hb^igo88srgfzxjq4@'
 
 ALLOWED_HOSTS = ['*']
 
-DEBUG = True
-TEMPLATE_DEBUG = True
+DEBUG = platform.system().lower() == 'windows'
+TEMPLATE_DEBUG = DEBUG
 
 
 # Application definition
@@ -68,10 +69,13 @@ DATABASES = {
 LANGUAGE_CODE = 'en-us'
 LANGUAGES = (
     ('en', u'English'),
+    ('en-us', u'English'),
+    ('en-ph', u'English'),
+    ('en-my', u'English'),
     ('zh-tw', u'繁體中文'),
     ('id-id', u'Indonesian'),
     ('vi-vn', u'tiếng Việt'),
-    ('th-th', u'tiếng Việt'),
+    ('th-th', u'Thai'),
 )
 
 TIME_ZONE = 'Asia/Singapore'
@@ -86,9 +90,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
-STATIC_URL = '/static/'
 
 # https://docs.djangoproject.com/en/dev/ref/settings/#std:setting-STATIC_ROOT
+
+STATIC_URL = '/static/'
 # STATIC_ROOT = os.path.join(BASE_DIR, 'etc/static/collect')
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'etc/static'),
