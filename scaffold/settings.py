@@ -31,12 +31,14 @@ TEMPLATE_DEBUG = DEBUG
 
 # Application definition
 INSTALLED_APPS = (
-    'django.contrib.admin',
+    # 'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'scaffold.common',
+    'scaffold.apps.mobile',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -97,12 +99,10 @@ STATIC_URL = '/static/'
 # STATIC_ROOT = os.path.join(BASE_DIR, 'etc/static/collect')
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'etc/static'),
-    os.path.join(BASE_DIR, 'scaffold/common/static'),
 )
 
 TEMPLATE_DIRS = (
     os.path.join(BASE_DIR, 'etc/templates'),
-    os.path.join(BASE_DIR, 'scaffold/common/templates'),
 )
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'etc/uploads')
@@ -191,3 +191,5 @@ LOGGING = {
         }
     }
 }
+
+

@@ -5,8 +5,7 @@ WSGI_APPLICATION = 'scaffold.spec.prod.wsgi.application'
 
 GOP_OAUTH_SITE = "https://testconnect.garena.com"
 GOP_OAUTH_CALLBACK = "http://127.0.0.1:<port>"
-FACEBOOK_APPID = 123131
-TEMPLATE_DEBUG = True
+TEMPLATE_DEBUG = False
 LOGGER = 'app.default'
 DATABASES = {
     'default': {
@@ -26,3 +25,8 @@ DATABASES = {
     #     'PORT': '6606',
     # }
 }
+
+
+print "---------------------------------------------------"
+print "lauching with production setting, you can change it in manage.py or 'run/debug configuration/enviroments variables/DJANGO_SETTINGS_MODULE' in pycharm"
+print "---------------------------------------------------"

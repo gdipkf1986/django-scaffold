@@ -1,0 +1,1 @@
+{"version":3,"mappings":"AAOA,IAAI;EACF,SAAS,EARA,IAAI;;AAWf,YAAY;EACV,SAAS,EAAE,gBAAgB","sources":["base.scss"],"names":[],"file":"base.css","sourcesContent":["$text-size:14px;\r\n\r\n$h4:$text-size+4;\r\n$h3:$h4+2;\r\n$h2:$h3+2;\r\n$h1:$h2+4;\r\n\r\nbody{\r\n  font-size: $text-size\r\n}\r\n\r\n.transaction{\r\n  transform: translateX(-50%);\r\n}"],"sourceRoot":"/source/"}

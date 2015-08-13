@@ -21,13 +21,8 @@ class CovertPathToParam(RedirectView):
         return return_url
 
 
-urlpatterns = patterns('',
-                       # Examples:
-                       # url(r'^$', 'scaffold.views.home', name='home'),
-                       # url(r'^blog/', include('blog.urls')),
-                       # url(r'^admin/', include(admin.site.urls)),
-
-                       url(r'^' + langReg + r'/', CovertPathToParam.as_view()),
-                       url(r'^myapp/', include('scaffold.apps.myapp.urls'))
-
-                       )
+urlpatterns = patterns(
+    '',
+    url(r'^' + langReg + r'/', CovertPathToParam.as_view()),
+    url(r'^m/', include('scaffold.apps.mobile.urls')),
+)

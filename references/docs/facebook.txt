@@ -1,0 +1,4 @@
+1. Given URL is not allowed by the Application configuration
+
+    App > Settings > Basic > Website(if no website then add platform)
+    App > Settings > Advanced > OAuth Settings > Valid OAuth redirect url should be website domain (for example: dqmsl.garena.com)

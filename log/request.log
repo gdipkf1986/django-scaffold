@@ -31,3 +31,1169 @@ Traceback (most recent call last):
   File "C:\Python27\lib\site-packages\django\db\backends\sqlite3\base.py", line 450, in execute
     return Database.Cursor.execute(self, query, params)
 OperationalError: no such table: django_session
+2015-06-11 11:50:47,927 [Thread-1:11188] [django.request:226] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 90, in get_response
+    response = middleware_method(request)
+  File "D:\webhome\django_scaffold\scaffold\scaffold\common\midware_language_detect.py", line 40, in process_request
+    elif cookie_name in request.session.keys():
+  File "C:\Python27\lib\site-packages\django\contrib\sessions\backends\base.py", line 118, in keys
+    return self._session.keys()
+  File "C:\Python27\lib\site-packages\django\contrib\sessions\backends\base.py", line 173, in _get_session
+    self._session_cache = self.load()
+  File "C:\Python27\lib\site-packages\django\contrib\sessions\backends\db.py", line 20, in load
+    expire_date__gt=timezone.now()
+  File "C:\Python27\lib\site-packages\django\db\models\manager.py", line 152, in get
+    return self.get_queryset().get(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 301, in get
+    num = len(clone)
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 77, in __len__
+    self._fetch_all()
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 854, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 220, in iterator
+    for row in compiler.results_iter():
+  File "C:\Python27\lib\site-packages\django\db\models\sql\compiler.py", line 710, in results_iter
+    for rows in self.execute_sql(MULTI):
+  File "C:\Python27\lib\site-packages\django\db\models\sql\compiler.py", line 781, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 69, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\utils.py", line 99, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\mysql\base.py", line 124, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Python27\lib\site-packages\MySQLdb\cursors.py", line 205, in execute
+    self.errorhandler(self, exc, value)
+  File "C:\Python27\lib\site-packages\MySQLdb\connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+ProgrammingError: (1146, "Table 'test.django_session' doesn't exist")
+2015-06-11 11:50:48,519 [Thread-3:11104] [django.request:226] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 90, in get_response
+    response = middleware_method(request)
+  File "D:\webhome\django_scaffold\scaffold\scaffold\common\midware_language_detect.py", line 40, in process_request
+    elif cookie_name in request.session.keys():
+  File "C:\Python27\lib\site-packages\django\contrib\sessions\backends\base.py", line 118, in keys
+    return self._session.keys()
+  File "C:\Python27\lib\site-packages\django\contrib\sessions\backends\base.py", line 173, in _get_session
+    self._session_cache = self.load()
+  File "C:\Python27\lib\site-packages\django\contrib\sessions\backends\db.py", line 20, in load
+    expire_date__gt=timezone.now()
+  File "C:\Python27\lib\site-packages\django\db\models\manager.py", line 152, in get
+    return self.get_queryset().get(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 301, in get
+    num = len(clone)
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 77, in __len__
+    self._fetch_all()
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 854, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 220, in iterator
+    for row in compiler.results_iter():
+  File "C:\Python27\lib\site-packages\django\db\models\sql\compiler.py", line 710, in results_iter
+    for rows in self.execute_sql(MULTI):
+  File "C:\Python27\lib\site-packages\django\db\models\sql\compiler.py", line 781, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 69, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\utils.py", line 99, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\mysql\base.py", line 124, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Python27\lib\site-packages\MySQLdb\cursors.py", line 205, in execute
+    self.errorhandler(self, exc, value)
+  File "C:\Python27\lib\site-packages\MySQLdb\connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+ProgrammingError: (1146, "Table 'test.django_session' doesn't exist")
+2015-06-11 16:26:45,914 [Thread-7:11916] [django.request:226] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /m
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 90, in get_response
+    response = middleware_method(request)
+  File "C:\Python27\lib\site-packages\django\middleware\common.py", line 72, in process_request
+    urlresolvers.is_valid_path("%s/" % request.path_info, urlconf)):
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 573, in is_valid_path
+    resolve(path, urlconf)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 453, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 320, in resolve
+    sub_match = pattern.resolve(new_path)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 318, in resolve
+    for pattern in self.url_patterns:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 350, in url_patterns
+    raise ImproperlyConfigured("The included urlconf %s doesn't have any patterns in it" % self.urlconf_name)
+ImproperlyConfigured: The included urlconf <module 'scaffold.apps.mobile.urls' from 'D:/webhome/django_scaffold/scaffold\scaffold\apps\mobile\urls.py'> doesn't have any patterns in it
+2015-06-11 16:26:46,242 [Thread-7:11916] [django.request:226] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /m
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 201, in get_response
+    response = middleware_method(request, response)
+  File "D:/webhome/django_scaffold/scaffold\scaffold\common\midware_language_detect.py", line 51, in process_response
+    if not cookie or cookie != request.session.get(cookie_name):
+  File "C:\Python27\lib\site-packages\django\contrib\sessions\backends\base.py", line 58, in get
+    return self._session.get(key, default)
+  File "C:\Python27\lib\site-packages\django\contrib\sessions\backends\base.py", line 173, in _get_session
+    self._session_cache = self.load()
+  File "C:\Python27\lib\site-packages\django\contrib\sessions\backends\db.py", line 20, in load
+    expire_date__gt=timezone.now()
+  File "C:\Python27\lib\site-packages\django\db\models\manager.py", line 152, in get
+    return self.get_queryset().get(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 301, in get
+    num = len(clone)
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 77, in __len__
+    self._fetch_all()
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 854, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 220, in iterator
+    for row in compiler.results_iter():
+  File "C:\Python27\lib\site-packages\django\db\models\sql\compiler.py", line 710, in results_iter
+    for rows in self.execute_sql(MULTI):
+  File "C:\Python27\lib\site-packages\django\db\models\sql\compiler.py", line 781, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 69, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\utils.py", line 99, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\mysql\base.py", line 124, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Python27\lib\site-packages\MySQLdb\cursors.py", line 205, in execute
+    self.errorhandler(self, exc, value)
+  File "C:\Python27\lib\site-packages\MySQLdb\connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+ProgrammingError: (1146, "Table 'scaffold_stage.django_session' doesn't exist")
+2015-06-11 16:26:46,947 [Thread-8:9108] [django.request:226] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 90, in get_response
+    response = middleware_method(request)
+  File "D:/webhome/django_scaffold/scaffold\scaffold\common\midware_language_detect.py", line 46, in process_request
+    request.session[cookie_name] = language_code
+  File "C:\Python27\lib\site-packages\django\contrib\sessions\backends\base.py", line 50, in __setitem__
+    self._session[key] = value
+  File "C:\Python27\lib\site-packages\django\contrib\sessions\backends\base.py", line 173, in _get_session
+    self._session_cache = self.load()
+  File "C:\Python27\lib\site-packages\django\contrib\sessions\backends\db.py", line 20, in load
+    expire_date__gt=timezone.now()
+  File "C:\Python27\lib\site-packages\django\db\models\manager.py", line 152, in get
+    return self.get_queryset().get(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 301, in get
+    num = len(clone)
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 77, in __len__
+    self._fetch_all()
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 854, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 220, in iterator
+    for row in compiler.results_iter():
+  File "C:\Python27\lib\site-packages\django\db\models\sql\compiler.py", line 710, in results_iter
+    for rows in self.execute_sql(MULTI):
+  File "C:\Python27\lib\site-packages\django\db\models\sql\compiler.py", line 781, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 69, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\utils.py", line 99, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\mysql\base.py", line 124, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Python27\lib\site-packages\MySQLdb\cursors.py", line 205, in execute
+    self.errorhandler(self, exc, value)
+  File "C:\Python27\lib\site-packages\MySQLdb\connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+ProgrammingError: (1146, "Table 'scaffold_stage.django_session' doesn't exist")
+2015-06-11 16:26:47,394 [Thread-8:9108] [django.request:226] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 201, in get_response
+    response = middleware_method(request, response)
+  File "D:/webhome/django_scaffold/scaffold\scaffold\common\midware_language_detect.py", line 51, in process_response
+    if not cookie or cookie != request.session.get(cookie_name):
+  File "C:\Python27\lib\site-packages\django\contrib\sessions\backends\base.py", line 58, in get
+    return self._session.get(key, default)
+  File "C:\Python27\lib\site-packages\django\contrib\sessions\backends\base.py", line 173, in _get_session
+    self._session_cache = self.load()
+  File "C:\Python27\lib\site-packages\django\contrib\sessions\backends\db.py", line 20, in load
+    expire_date__gt=timezone.now()
+  File "C:\Python27\lib\site-packages\django\db\models\manager.py", line 152, in get
+    return self.get_queryset().get(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 301, in get
+    num = len(clone)
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 77, in __len__
+    self._fetch_all()
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 854, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 220, in iterator
+    for row in compiler.results_iter():
+  File "C:\Python27\lib\site-packages\django\db\models\sql\compiler.py", line 710, in results_iter
+    for rows in self.execute_sql(MULTI):
+  File "C:\Python27\lib\site-packages\django\db\models\sql\compiler.py", line 781, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 69, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\utils.py", line 99, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\mysql\base.py", line 124, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Python27\lib\site-packages\MySQLdb\cursors.py", line 205, in execute
+    self.errorhandler(self, exc, value)
+  File "C:\Python27\lib\site-packages\MySQLdb\connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+ProgrammingError: (1146, "Table 'scaffold_stage.django_session' doesn't exist")
+2015-06-11 16:49:55,328 [Thread-7:3668] [django.request:226] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /m
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 201, in get_response
+    response = middleware_method(request, response)
+  File "D:/webhome/django_scaffold/scaffold\scaffold\common\midware_language_detect.py", line 51, in process_response
+    if not cookie or cookie != request.session.get(cookie_name):
+  File "C:\Python27\lib\site-packages\django\contrib\sessions\backends\base.py", line 58, in get
+    return self._session.get(key, default)
+  File "C:\Python27\lib\site-packages\django\contrib\sessions\backends\base.py", line 173, in _get_session
+    self._session_cache = self.load()
+  File "C:\Python27\lib\site-packages\django\contrib\sessions\backends\db.py", line 20, in load
+    expire_date__gt=timezone.now()
+  File "C:\Python27\lib\site-packages\django\db\models\manager.py", line 152, in get
+    return self.get_queryset().get(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 301, in get
+    num = len(clone)
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 77, in __len__
+    self._fetch_all()
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 854, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 220, in iterator
+    for row in compiler.results_iter():
+  File "C:\Python27\lib\site-packages\django\db\models\sql\compiler.py", line 710, in results_iter
+    for rows in self.execute_sql(MULTI):
+  File "C:\Python27\lib\site-packages\django\db\models\sql\compiler.py", line 781, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 69, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\utils.py", line 99, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\mysql\base.py", line 124, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Python27\lib\site-packages\MySQLdb\cursors.py", line 205, in execute
+    self.errorhandler(self, exc, value)
+  File "C:\Python27\lib\site-packages\MySQLdb\connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+ProgrammingError: (1146, "Table 'scaffold_stage.django_session' doesn't exist")
+2015-06-11 16:49:56,055 [Thread-8:10744] [django.request:226] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 90, in get_response
+    response = middleware_method(request)
+  File "D:/webhome/django_scaffold/scaffold\scaffold\common\midware_language_detect.py", line 46, in process_request
+    request.session[cookie_name] = language_code
+  File "C:\Python27\lib\site-packages\django\contrib\sessions\backends\base.py", line 50, in __setitem__
+    self._session[key] = value
+  File "C:\Python27\lib\site-packages\django\contrib\sessions\backends\base.py", line 173, in _get_session
+    self._session_cache = self.load()
+  File "C:\Python27\lib\site-packages\django\contrib\sessions\backends\db.py", line 20, in load
+    expire_date__gt=timezone.now()
+  File "C:\Python27\lib\site-packages\django\db\models\manager.py", line 152, in get
+    return self.get_queryset().get(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 301, in get
+    num = len(clone)
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 77, in __len__
+    self._fetch_all()
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 854, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 220, in iterator
+    for row in compiler.results_iter():
+  File "C:\Python27\lib\site-packages\django\db\models\sql\compiler.py", line 710, in results_iter
+    for rows in self.execute_sql(MULTI):
+  File "C:\Python27\lib\site-packages\django\db\models\sql\compiler.py", line 781, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 69, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\utils.py", line 99, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\mysql\base.py", line 124, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Python27\lib\site-packages\MySQLdb\cursors.py", line 205, in execute
+    self.errorhandler(self, exc, value)
+  File "C:\Python27\lib\site-packages\MySQLdb\connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+ProgrammingError: (1146, "Table 'scaffold_stage.django_session' doesn't exist")
+2015-06-11 16:49:56,545 [Thread-8:10744] [django.request:226] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 201, in get_response
+    response = middleware_method(request, response)
+  File "D:/webhome/django_scaffold/scaffold\scaffold\common\midware_language_detect.py", line 51, in process_response
+    if not cookie or cookie != request.session.get(cookie_name):
+  File "C:\Python27\lib\site-packages\django\contrib\sessions\backends\base.py", line 58, in get
+    return self._session.get(key, default)
+  File "C:\Python27\lib\site-packages\django\contrib\sessions\backends\base.py", line 173, in _get_session
+    self._session_cache = self.load()
+  File "C:\Python27\lib\site-packages\django\contrib\sessions\backends\db.py", line 20, in load
+    expire_date__gt=timezone.now()
+  File "C:\Python27\lib\site-packages\django\db\models\manager.py", line 152, in get
+    return self.get_queryset().get(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 301, in get
+    num = len(clone)
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 77, in __len__
+    self._fetch_all()
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 854, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 220, in iterator
+    for row in compiler.results_iter():
+  File "C:\Python27\lib\site-packages\django\db\models\sql\compiler.py", line 710, in results_iter
+    for rows in self.execute_sql(MULTI):
+  File "C:\Python27\lib\site-packages\django\db\models\sql\compiler.py", line 781, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 69, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\utils.py", line 99, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\mysql\base.py", line 124, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Python27\lib\site-packages\MySQLdb\cursors.py", line 205, in execute
+    self.errorhandler(self, exc, value)
+  File "C:\Python27\lib\site-packages\MySQLdb\connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+ProgrammingError: (1146, "Table 'scaffold_stage.django_session' doesn't exist")
+2015-06-15 18:35:14,401 [Thread-7:6888] [django.request:226] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /m
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 201, in get_response
+    response = middleware_method(request, response)
+  File "D:/webhome/django_scaffold/scaffold\scaffold\common\midware_language_detect.py", line 51, in process_response
+    if not cookie or cookie != request.session.get(cookie_name):
+  File "C:\Python27\lib\site-packages\django\contrib\sessions\backends\base.py", line 58, in get
+    return self._session.get(key, default)
+  File "C:\Python27\lib\site-packages\django\contrib\sessions\backends\base.py", line 173, in _get_session
+    self._session_cache = self.load()
+  File "C:\Python27\lib\site-packages\django\contrib\sessions\backends\db.py", line 20, in load
+    expire_date__gt=timezone.now()
+  File "C:\Python27\lib\site-packages\django\db\models\manager.py", line 152, in get
+    return self.get_queryset().get(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 301, in get
+    num = len(clone)
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 77, in __len__
+    self._fetch_all()
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 854, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 220, in iterator
+    for row in compiler.results_iter():
+  File "C:\Python27\lib\site-packages\django\db\models\sql\compiler.py", line 710, in results_iter
+    for rows in self.execute_sql(MULTI):
+  File "C:\Python27\lib\site-packages\django\db\models\sql\compiler.py", line 781, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 69, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\utils.py", line 99, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\mysql\base.py", line 124, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Python27\lib\site-packages\MySQLdb\cursors.py", line 205, in execute
+    self.errorhandler(self, exc, value)
+  File "C:\Python27\lib\site-packages\MySQLdb\connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+ProgrammingError: (1146, "Table 'scaffold_stage.django_session' doesn't exist")
+2015-06-15 18:35:15,124 [Thread-8:11272] [django.request:226] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 90, in get_response
+    response = middleware_method(request)
+  File "D:/webhome/django_scaffold/scaffold\scaffold\common\midware_language_detect.py", line 46, in process_request
+    request.session[cookie_name] = language_code
+  File "C:\Python27\lib\site-packages\django\contrib\sessions\backends\base.py", line 50, in __setitem__
+    self._session[key] = value
+  File "C:\Python27\lib\site-packages\django\contrib\sessions\backends\base.py", line 173, in _get_session
+    self._session_cache = self.load()
+  File "C:\Python27\lib\site-packages\django\contrib\sessions\backends\db.py", line 20, in load
+    expire_date__gt=timezone.now()
+  File "C:\Python27\lib\site-packages\django\db\models\manager.py", line 152, in get
+    return self.get_queryset().get(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 301, in get
+    num = len(clone)
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 77, in __len__
+    self._fetch_all()
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 854, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 220, in iterator
+    for row in compiler.results_iter():
+  File "C:\Python27\lib\site-packages\django\db\models\sql\compiler.py", line 710, in results_iter
+    for rows in self.execute_sql(MULTI):
+  File "C:\Python27\lib\site-packages\django\db\models\sql\compiler.py", line 781, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 69, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\utils.py", line 99, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\mysql\base.py", line 124, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Python27\lib\site-packages\MySQLdb\cursors.py", line 205, in execute
+    self.errorhandler(self, exc, value)
+  File "C:\Python27\lib\site-packages\MySQLdb\connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+ProgrammingError: (1146, "Table 'scaffold_stage.django_session' doesn't exist")
+2015-06-15 18:35:15,559 [Thread-8:11272] [django.request:226] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 201, in get_response
+    response = middleware_method(request, response)
+  File "D:/webhome/django_scaffold/scaffold\scaffold\common\midware_language_detect.py", line 51, in process_response
+    if not cookie or cookie != request.session.get(cookie_name):
+  File "C:\Python27\lib\site-packages\django\contrib\sessions\backends\base.py", line 58, in get
+    return self._session.get(key, default)
+  File "C:\Python27\lib\site-packages\django\contrib\sessions\backends\base.py", line 173, in _get_session
+    self._session_cache = self.load()
+  File "C:\Python27\lib\site-packages\django\contrib\sessions\backends\db.py", line 20, in load
+    expire_date__gt=timezone.now()
+  File "C:\Python27\lib\site-packages\django\db\models\manager.py", line 152, in get
+    return self.get_queryset().get(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 301, in get
+    num = len(clone)
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 77, in __len__
+    self._fetch_all()
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 854, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 220, in iterator
+    for row in compiler.results_iter():
+  File "C:\Python27\lib\site-packages\django\db\models\sql\compiler.py", line 710, in results_iter
+    for rows in self.execute_sql(MULTI):
+  File "C:\Python27\lib\site-packages\django\db\models\sql\compiler.py", line 781, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 69, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\utils.py", line 99, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\mysql\base.py", line 124, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Python27\lib\site-packages\MySQLdb\cursors.py", line 205, in execute
+    self.errorhandler(self, exc, value)
+  File "C:\Python27\lib\site-packages\MySQLdb\connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+ProgrammingError: (1146, "Table 'scaffold_stage.django_session' doesn't exist")
+2015-06-15 18:38:52,230 [Thread-7:5864] [django.request:226] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /m
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 201, in get_response
+    response = middleware_method(request, response)
+  File "D:/webhome/django_scaffold/scaffold\scaffold\common\midware_language_detect.py", line 51, in process_response
+    if not cookie or cookie != request.session.get(cookie_name):
+  File "C:\Python27\lib\site-packages\django\contrib\sessions\backends\base.py", line 58, in get
+    return self._session.get(key, default)
+  File "C:\Python27\lib\site-packages\django\contrib\sessions\backends\base.py", line 173, in _get_session
+    self._session_cache = self.load()
+  File "C:\Python27\lib\site-packages\django\contrib\sessions\backends\db.py", line 20, in load
+    expire_date__gt=timezone.now()
+  File "C:\Python27\lib\site-packages\django\db\models\manager.py", line 152, in get
+    return self.get_queryset().get(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 301, in get
+    num = len(clone)
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 77, in __len__
+    self._fetch_all()
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 854, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 220, in iterator
+    for row in compiler.results_iter():
+  File "C:\Python27\lib\site-packages\django\db\models\sql\compiler.py", line 710, in results_iter
+    for rows in self.execute_sql(MULTI):
+  File "C:\Python27\lib\site-packages\django\db\models\sql\compiler.py", line 781, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 69, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\utils.py", line 99, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\mysql\base.py", line 124, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Python27\lib\site-packages\MySQLdb\cursors.py", line 205, in execute
+    self.errorhandler(self, exc, value)
+  File "C:\Python27\lib\site-packages\MySQLdb\connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+ProgrammingError: (1146, "Table 'scaffold_stage.django_session' doesn't exist")
+2015-06-15 18:38:52,967 [Thread-8:10648] [django.request:226] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 90, in get_response
+    response = middleware_method(request)
+  File "D:/webhome/django_scaffold/scaffold\scaffold\common\midware_language_detect.py", line 46, in process_request
+    request.session[cookie_name] = language_code
+  File "C:\Python27\lib\site-packages\django\contrib\sessions\backends\base.py", line 50, in __setitem__
+    self._session[key] = value
+  File "C:\Python27\lib\site-packages\django\contrib\sessions\backends\base.py", line 173, in _get_session
+    self._session_cache = self.load()
+  File "C:\Python27\lib\site-packages\django\contrib\sessions\backends\db.py", line 20, in load
+    expire_date__gt=timezone.now()
+  File "C:\Python27\lib\site-packages\django\db\models\manager.py", line 152, in get
+    return self.get_queryset().get(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 301, in get
+    num = len(clone)
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 77, in __len__
+    self._fetch_all()
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 854, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 220, in iterator
+    for row in compiler.results_iter():
+  File "C:\Python27\lib\site-packages\django\db\models\sql\compiler.py", line 710, in results_iter
+    for rows in self.execute_sql(MULTI):
+  File "C:\Python27\lib\site-packages\django\db\models\sql\compiler.py", line 781, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 69, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\utils.py", line 99, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\mysql\base.py", line 124, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Python27\lib\site-packages\MySQLdb\cursors.py", line 205, in execute
+    self.errorhandler(self, exc, value)
+  File "C:\Python27\lib\site-packages\MySQLdb\connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+ProgrammingError: (1146, "Table 'scaffold_stage.django_session' doesn't exist")
+2015-06-15 18:38:53,401 [Thread-8:10648] [django.request:226] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 201, in get_response
+    response = middleware_method(request, response)
+  File "D:/webhome/django_scaffold/scaffold\scaffold\common\midware_language_detect.py", line 51, in process_response
+    if not cookie or cookie != request.session.get(cookie_name):
+  File "C:\Python27\lib\site-packages\django\contrib\sessions\backends\base.py", line 58, in get
+    return self._session.get(key, default)
+  File "C:\Python27\lib\site-packages\django\contrib\sessions\backends\base.py", line 173, in _get_session
+    self._session_cache = self.load()
+  File "C:\Python27\lib\site-packages\django\contrib\sessions\backends\db.py", line 20, in load
+    expire_date__gt=timezone.now()
+  File "C:\Python27\lib\site-packages\django\db\models\manager.py", line 152, in get
+    return self.get_queryset().get(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 301, in get
+    num = len(clone)
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 77, in __len__
+    self._fetch_all()
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 854, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 220, in iterator
+    for row in compiler.results_iter():
+  File "C:\Python27\lib\site-packages\django\db\models\sql\compiler.py", line 710, in results_iter
+    for rows in self.execute_sql(MULTI):
+  File "C:\Python27\lib\site-packages\django\db\models\sql\compiler.py", line 781, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 69, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\utils.py", line 99, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\mysql\base.py", line 124, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Python27\lib\site-packages\MySQLdb\cursors.py", line 205, in execute
+    self.errorhandler(self, exc, value)
+  File "C:\Python27\lib\site-packages\MySQLdb\connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+ProgrammingError: (1146, "Table 'scaffold_stage.django_session' doesn't exist")
+2015-06-16 09:58:12,463 [Thread-11:5804] [django.request:226] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /m
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 201, in get_response
+    response = middleware_method(request, response)
+  File "D:/webhome/django_scaffold/scaffold\scaffold\common\midware_language_detect.py", line 51, in process_response
+    if not cookie or cookie != request.session.get(cookie_name):
+  File "C:\Python27\lib\site-packages\django\contrib\sessions\backends\base.py", line 58, in get
+    return self._session.get(key, default)
+  File "C:\Python27\lib\site-packages\django\contrib\sessions\backends\base.py", line 173, in _get_session
+    self._session_cache = self.load()
+  File "C:\Python27\lib\site-packages\django\contrib\sessions\backends\db.py", line 20, in load
+    expire_date__gt=timezone.now()
+  File "C:\Python27\lib\site-packages\django\db\models\manager.py", line 152, in get
+    return self.get_queryset().get(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 301, in get
+    num = len(clone)
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 77, in __len__
+    self._fetch_all()
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 854, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 220, in iterator
+    for row in compiler.results_iter():
+  File "C:\Python27\lib\site-packages\django\db\models\sql\compiler.py", line 710, in results_iter
+    for rows in self.execute_sql(MULTI):
+  File "C:\Python27\lib\site-packages\django\db\models\sql\compiler.py", line 781, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 69, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\utils.py", line 99, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\mysql\base.py", line 124, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Python27\lib\site-packages\MySQLdb\cursors.py", line 205, in execute
+    self.errorhandler(self, exc, value)
+  File "C:\Python27\lib\site-packages\MySQLdb\connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+ProgrammingError: (1146, "Table 'scaffold_stage.django_session' doesn't exist")
+2015-06-16 09:58:13,427 [Thread-12:3308] [django.request:226] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 90, in get_response
+    response = middleware_method(request)
+  File "D:/webhome/django_scaffold/scaffold\scaffold\common\midware_language_detect.py", line 46, in process_request
+    request.session[cookie_name] = language_code
+  File "C:\Python27\lib\site-packages\django\contrib\sessions\backends\base.py", line 50, in __setitem__
+    self._session[key] = value
+  File "C:\Python27\lib\site-packages\django\contrib\sessions\backends\base.py", line 173, in _get_session
+    self._session_cache = self.load()
+  File "C:\Python27\lib\site-packages\django\contrib\sessions\backends\db.py", line 20, in load
+    expire_date__gt=timezone.now()
+  File "C:\Python27\lib\site-packages\django\db\models\manager.py", line 152, in get
+    return self.get_queryset().get(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 301, in get
+    num = len(clone)
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 77, in __len__
+    self._fetch_all()
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 854, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 220, in iterator
+    for row in compiler.results_iter():
+  File "C:\Python27\lib\site-packages\django\db\models\sql\compiler.py", line 710, in results_iter
+    for rows in self.execute_sql(MULTI):
+  File "C:\Python27\lib\site-packages\django\db\models\sql\compiler.py", line 781, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 69, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\utils.py", line 99, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\mysql\base.py", line 124, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Python27\lib\site-packages\MySQLdb\cursors.py", line 205, in execute
+    self.errorhandler(self, exc, value)
+  File "C:\Python27\lib\site-packages\MySQLdb\connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+ProgrammingError: (1146, "Table 'scaffold_stage.django_session' doesn't exist")
+2015-06-16 09:58:13,861 [Thread-12:3308] [django.request:226] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 201, in get_response
+    response = middleware_method(request, response)
+  File "D:/webhome/django_scaffold/scaffold\scaffold\common\midware_language_detect.py", line 51, in process_response
+    if not cookie or cookie != request.session.get(cookie_name):
+  File "C:\Python27\lib\site-packages\django\contrib\sessions\backends\base.py", line 58, in get
+    return self._session.get(key, default)
+  File "C:\Python27\lib\site-packages\django\contrib\sessions\backends\base.py", line 173, in _get_session
+    self._session_cache = self.load()
+  File "C:\Python27\lib\site-packages\django\contrib\sessions\backends\db.py", line 20, in load
+    expire_date__gt=timezone.now()
+  File "C:\Python27\lib\site-packages\django\db\models\manager.py", line 152, in get
+    return self.get_queryset().get(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 301, in get
+    num = len(clone)
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 77, in __len__
+    self._fetch_all()
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 854, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 220, in iterator
+    for row in compiler.results_iter():
+  File "C:\Python27\lib\site-packages\django\db\models\sql\compiler.py", line 710, in results_iter
+    for rows in self.execute_sql(MULTI):
+  File "C:\Python27\lib\site-packages\django\db\models\sql\compiler.py", line 781, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 69, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\utils.py", line 99, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "C:\Python27\lib\site-packages\django\db\backends\util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\mysql\base.py", line 124, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Python27\lib\site-packages\MySQLdb\cursors.py", line 205, in execute
+    self.errorhandler(self, exc, value)
+  File "C:\Python27\lib\site-packages\MySQLdb\connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+ProgrammingError: (1146, "Table 'scaffold_stage.django_session' doesn't exist")
+2015-08-03 12:17:46,075 [Thread-8:8884] [django.request:224] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /m/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 88, in get_response
+    response = middleware_method(request)
+  File "D:/webhome/django_scaffold/scaffold\scaffold\common\midware_language_detect.py", line 40, in process_request
+    elif cookie_name in request.session.keys():
+  File "C:\Python27\lib\site-packages\django\contrib\sessions\backends\base.py", line 118, in keys
+    return self._session.keys()
+  File "C:\Python27\lib\site-packages\django\contrib\sessions\backends\base.py", line 173, in _get_session
+    self._session_cache = self.load()
+  File "C:\Python27\lib\site-packages\django\contrib\sessions\backends\db.py", line 20, in load
+    expire_date__gt=timezone.now()
+  File "C:\Python27\lib\site-packages\django\db\models\manager.py", line 151, in get
+    return self.get_queryset().get(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 304, in get
+    num = len(clone)
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 77, in __len__
+    self._fetch_all()
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 857, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 220, in iterator
+    for row in compiler.results_iter():
+  File "C:\Python27\lib\site-packages\django\db\models\sql\compiler.py", line 713, in results_iter
+    for rows in self.execute_sql(MULTI):
+  File "C:\Python27\lib\site-packages\django\db\models\sql\compiler.py", line 785, in execute_sql
+    cursor = self.connection.cursor()
+  File "C:\Python27\lib\site-packages\django\db\backends\__init__.py", line 160, in cursor
+    cursor = self.make_debug_cursor(self._cursor())
+  File "C:\Python27\lib\site-packages\django\db\backends\__init__.py", line 132, in _cursor
+    self.ensure_connection()
+  File "C:\Python27\lib\site-packages\django\db\backends\__init__.py", line 127, in ensure_connection
+    self.connect()
+  File "C:\Python27\lib\site-packages\django\db\utils.py", line 99, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "C:\Python27\lib\site-packages\django\db\backends\__init__.py", line 127, in ensure_connection
+    self.connect()
+  File "C:\Python27\lib\site-packages\django\db\backends\__init__.py", line 115, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "C:\Python27\lib\site-packages\django\db\backends\mysql\base.py", line 435, in get_new_connection
+    conn = Database.connect(**conn_params)
+  File "C:\Python27\lib\site-packages\MySQLdb\__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\MySQLdb\connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (1049, "Unknown database 'scaffold_stage'")
+2015-08-03 12:17:46,799 [Thread-9:13208] [django.request:224] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 88, in get_response
+    response = middleware_method(request)
+  File "D:/webhome/django_scaffold/scaffold\scaffold\common\midware_language_detect.py", line 40, in process_request
+    elif cookie_name in request.session.keys():
+  File "C:\Python27\lib\site-packages\django\contrib\sessions\backends\base.py", line 118, in keys
+    return self._session.keys()
+  File "C:\Python27\lib\site-packages\django\contrib\sessions\backends\base.py", line 173, in _get_session
+    self._session_cache = self.load()
+  File "C:\Python27\lib\site-packages\django\contrib\sessions\backends\db.py", line 20, in load
+    expire_date__gt=timezone.now()
+  File "C:\Python27\lib\site-packages\django\db\models\manager.py", line 151, in get
+    return self.get_queryset().get(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 304, in get
+    num = len(clone)
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 77, in __len__
+    self._fetch_all()
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 857, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 220, in iterator
+    for row in compiler.results_iter():
+  File "C:\Python27\lib\site-packages\django\db\models\sql\compiler.py", line 713, in results_iter
+    for rows in self.execute_sql(MULTI):
+  File "C:\Python27\lib\site-packages\django\db\models\sql\compiler.py", line 785, in execute_sql
+    cursor = self.connection.cursor()
+  File "C:\Python27\lib\site-packages\django\db\backends\__init__.py", line 160, in cursor
+    cursor = self.make_debug_cursor(self._cursor())
+  File "C:\Python27\lib\site-packages\django\db\backends\__init__.py", line 132, in _cursor
+    self.ensure_connection()
+  File "C:\Python27\lib\site-packages\django\db\backends\__init__.py", line 127, in ensure_connection
+    self.connect()
+  File "C:\Python27\lib\site-packages\django\db\utils.py", line 99, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "C:\Python27\lib\site-packages\django\db\backends\__init__.py", line 127, in ensure_connection
+    self.connect()
+  File "C:\Python27\lib\site-packages\django\db\backends\__init__.py", line 115, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "C:\Python27\lib\site-packages\django\db\backends\mysql\base.py", line 435, in get_new_connection
+    conn = Database.connect(**conn_params)
+  File "C:\Python27\lib\site-packages\MySQLdb\__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\MySQLdb\connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (1049, "Unknown database 'scaffold_stage'")
+2015-08-03 12:18:13,878 [Thread-7:12396] [django.request:224] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /m/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 88, in get_response
+    response = middleware_method(request)
+  File "D:/webhome/django_scaffold/scaffold\scaffold\common\midware_language_detect.py", line 40, in process_request
+    elif cookie_name in request.session.keys():
+  File "C:\Python27\lib\site-packages\django\contrib\sessions\backends\base.py", line 118, in keys
+    return self._session.keys()
+  File "C:\Python27\lib\site-packages\django\contrib\sessions\backends\base.py", line 173, in _get_session
+    self._session_cache = self.load()
+  File "C:\Python27\lib\site-packages\django\contrib\sessions\backends\db.py", line 20, in load
+    expire_date__gt=timezone.now()
+  File "C:\Python27\lib\site-packages\django\db\models\manager.py", line 151, in get
+    return self.get_queryset().get(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 304, in get
+    num = len(clone)
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 77, in __len__
+    self._fetch_all()
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 857, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 220, in iterator
+    for row in compiler.results_iter():
+  File "C:\Python27\lib\site-packages\django\db\models\sql\compiler.py", line 713, in results_iter
+    for rows in self.execute_sql(MULTI):
+  File "C:\Python27\lib\site-packages\django\db\models\sql\compiler.py", line 785, in execute_sql
+    cursor = self.connection.cursor()
+  File "C:\Python27\lib\site-packages\django\db\backends\__init__.py", line 160, in cursor
+    cursor = self.make_debug_cursor(self._cursor())
+  File "C:\Python27\lib\site-packages\django\db\backends\__init__.py", line 132, in _cursor
+    self.ensure_connection()
+  File "C:\Python27\lib\site-packages\django\db\backends\__init__.py", line 127, in ensure_connection
+    self.connect()
+  File "C:\Python27\lib\site-packages\django\db\utils.py", line 99, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "C:\Python27\lib\site-packages\django\db\backends\__init__.py", line 127, in ensure_connection
+    self.connect()
+  File "C:\Python27\lib\site-packages\django\db\backends\__init__.py", line 115, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "C:\Python27\lib\site-packages\django\db\backends\mysql\base.py", line 435, in get_new_connection
+    conn = Database.connect(**conn_params)
+  File "C:\Python27\lib\site-packages\MySQLdb\__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\MySQLdb\connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (1049, "Unknown database 'scaffold_stage'")
+2015-08-03 12:18:14,648 [Thread-8:3520] [django.request:224] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 88, in get_response
+    response = middleware_method(request)
+  File "D:/webhome/django_scaffold/scaffold\scaffold\common\midware_language_detect.py", line 40, in process_request
+    elif cookie_name in request.session.keys():
+  File "C:\Python27\lib\site-packages\django\contrib\sessions\backends\base.py", line 118, in keys
+    return self._session.keys()
+  File "C:\Python27\lib\site-packages\django\contrib\sessions\backends\base.py", line 173, in _get_session
+    self._session_cache = self.load()
+  File "C:\Python27\lib\site-packages\django\contrib\sessions\backends\db.py", line 20, in load
+    expire_date__gt=timezone.now()
+  File "C:\Python27\lib\site-packages\django\db\models\manager.py", line 151, in get
+    return self.get_queryset().get(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 304, in get
+    num = len(clone)
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 77, in __len__
+    self._fetch_all()
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 857, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 220, in iterator
+    for row in compiler.results_iter():
+  File "C:\Python27\lib\site-packages\django\db\models\sql\compiler.py", line 713, in results_iter
+    for rows in self.execute_sql(MULTI):
+  File "C:\Python27\lib\site-packages\django\db\models\sql\compiler.py", line 785, in execute_sql
+    cursor = self.connection.cursor()
+  File "C:\Python27\lib\site-packages\django\db\backends\__init__.py", line 160, in cursor
+    cursor = self.make_debug_cursor(self._cursor())
+  File "C:\Python27\lib\site-packages\django\db\backends\__init__.py", line 132, in _cursor
+    self.ensure_connection()
+  File "C:\Python27\lib\site-packages\django\db\backends\__init__.py", line 127, in ensure_connection
+    self.connect()
+  File "C:\Python27\lib\site-packages\django\db\utils.py", line 99, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "C:\Python27\lib\site-packages\django\db\backends\__init__.py", line 127, in ensure_connection
+    self.connect()
+  File "C:\Python27\lib\site-packages\django\db\backends\__init__.py", line 115, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "C:\Python27\lib\site-packages\django\db\backends\mysql\base.py", line 435, in get_new_connection
+    conn = Database.connect(**conn_params)
+  File "C:\Python27\lib\site-packages\MySQLdb\__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\MySQLdb\connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (1049, "Unknown database 'scaffold_stage'")
+2015-08-03 16:13:22,058 [Thread-7:8168] [django.request:224] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /m/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 88, in get_response
+    response = middleware_method(request)
+  File "D:/webhome/django_scaffold/scaffold\scaffold\common\midware_language_detect.py", line 40, in process_request
+    elif cookie_name in request.session.keys():
+  File "C:\Python27\lib\site-packages\django\contrib\sessions\backends\base.py", line 118, in keys
+    return self._session.keys()
+  File "C:\Python27\lib\site-packages\django\contrib\sessions\backends\base.py", line 173, in _get_session
+    self._session_cache = self.load()
+  File "C:\Python27\lib\site-packages\django\contrib\sessions\backends\db.py", line 20, in load
+    expire_date__gt=timezone.now()
+  File "C:\Python27\lib\site-packages\django\db\models\manager.py", line 151, in get
+    return self.get_queryset().get(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 304, in get
+    num = len(clone)
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 77, in __len__
+    self._fetch_all()
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 857, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 220, in iterator
+    for row in compiler.results_iter():
+  File "C:\Python27\lib\site-packages\django\db\models\sql\compiler.py", line 713, in results_iter
+    for rows in self.execute_sql(MULTI):
+  File "C:\Python27\lib\site-packages\django\db\models\sql\compiler.py", line 785, in execute_sql
+    cursor = self.connection.cursor()
+  File "C:\Python27\lib\site-packages\django\db\backends\__init__.py", line 160, in cursor
+    cursor = self.make_debug_cursor(self._cursor())
+  File "C:\Python27\lib\site-packages\django\db\backends\__init__.py", line 132, in _cursor
+    self.ensure_connection()
+  File "C:\Python27\lib\site-packages\django\db\backends\__init__.py", line 127, in ensure_connection
+    self.connect()
+  File "C:\Python27\lib\site-packages\django\db\utils.py", line 99, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "C:\Python27\lib\site-packages\django\db\backends\__init__.py", line 127, in ensure_connection
+    self.connect()
+  File "C:\Python27\lib\site-packages\django\db\backends\__init__.py", line 115, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "C:\Python27\lib\site-packages\django\db\backends\mysql\base.py", line 435, in get_new_connection
+    conn = Database.connect(**conn_params)
+  File "C:\Python27\lib\site-packages\MySQLdb\__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\MySQLdb\connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (1049, "Unknown database 'scaffold_stage'")
+2015-08-03 16:13:22,818 [Thread-8:8508] [django.request:224] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 88, in get_response
+    response = middleware_method(request)
+  File "D:/webhome/django_scaffold/scaffold\scaffold\common\midware_language_detect.py", line 40, in process_request
+    elif cookie_name in request.session.keys():
+  File "C:\Python27\lib\site-packages\django\contrib\sessions\backends\base.py", line 118, in keys
+    return self._session.keys()
+  File "C:\Python27\lib\site-packages\django\contrib\sessions\backends\base.py", line 173, in _get_session
+    self._session_cache = self.load()
+  File "C:\Python27\lib\site-packages\django\contrib\sessions\backends\db.py", line 20, in load
+    expire_date__gt=timezone.now()
+  File "C:\Python27\lib\site-packages\django\db\models\manager.py", line 151, in get
+    return self.get_queryset().get(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 304, in get
+    num = len(clone)
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 77, in __len__
+    self._fetch_all()
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 857, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 220, in iterator
+    for row in compiler.results_iter():
+  File "C:\Python27\lib\site-packages\django\db\models\sql\compiler.py", line 713, in results_iter
+    for rows in self.execute_sql(MULTI):
+  File "C:\Python27\lib\site-packages\django\db\models\sql\compiler.py", line 785, in execute_sql
+    cursor = self.connection.cursor()
+  File "C:\Python27\lib\site-packages\django\db\backends\__init__.py", line 160, in cursor
+    cursor = self.make_debug_cursor(self._cursor())
+  File "C:\Python27\lib\site-packages\django\db\backends\__init__.py", line 132, in _cursor
+    self.ensure_connection()
+  File "C:\Python27\lib\site-packages\django\db\backends\__init__.py", line 127, in ensure_connection
+    self.connect()
+  File "C:\Python27\lib\site-packages\django\db\utils.py", line 99, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "C:\Python27\lib\site-packages\django\db\backends\__init__.py", line 127, in ensure_connection
+    self.connect()
+  File "C:\Python27\lib\site-packages\django\db\backends\__init__.py", line 115, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "C:\Python27\lib\site-packages\django\db\backends\mysql\base.py", line 435, in get_new_connection
+    conn = Database.connect(**conn_params)
+  File "C:\Python27\lib\site-packages\MySQLdb\__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\MySQLdb\connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (1049, "Unknown database 'scaffold_stage'")
+2015-08-03 16:43:32,592 [Thread-7:4880] [django.request:224] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /m/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 88, in get_response
+    response = middleware_method(request)
+  File "D:/webhome/django_scaffold/scaffold\scaffold\common\midware_language_detect.py", line 40, in process_request
+    elif cookie_name in request.session.keys():
+  File "C:\Python27\lib\site-packages\django\contrib\sessions\backends\base.py", line 118, in keys
+    return self._session.keys()
+  File "C:\Python27\lib\site-packages\django\contrib\sessions\backends\base.py", line 173, in _get_session
+    self._session_cache = self.load()
+  File "C:\Python27\lib\site-packages\django\contrib\sessions\backends\db.py", line 20, in load
+    expire_date__gt=timezone.now()
+  File "C:\Python27\lib\site-packages\django\db\models\manager.py", line 151, in get
+    return self.get_queryset().get(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 304, in get
+    num = len(clone)
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 77, in __len__
+    self._fetch_all()
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 857, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 220, in iterator
+    for row in compiler.results_iter():
+  File "C:\Python27\lib\site-packages\django\db\models\sql\compiler.py", line 713, in results_iter
+    for rows in self.execute_sql(MULTI):
+  File "C:\Python27\lib\site-packages\django\db\models\sql\compiler.py", line 785, in execute_sql
+    cursor = self.connection.cursor()
+  File "C:\Python27\lib\site-packages\django\db\backends\__init__.py", line 160, in cursor
+    cursor = self.make_debug_cursor(self._cursor())
+  File "C:\Python27\lib\site-packages\django\db\backends\__init__.py", line 132, in _cursor
+    self.ensure_connection()
+  File "C:\Python27\lib\site-packages\django\db\backends\__init__.py", line 127, in ensure_connection
+    self.connect()
+  File "C:\Python27\lib\site-packages\django\db\utils.py", line 99, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "C:\Python27\lib\site-packages\django\db\backends\__init__.py", line 127, in ensure_connection
+    self.connect()
+  File "C:\Python27\lib\site-packages\django\db\backends\__init__.py", line 115, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "C:\Python27\lib\site-packages\django\db\backends\mysql\base.py", line 435, in get_new_connection
+    conn = Database.connect(**conn_params)
+  File "C:\Python27\lib\site-packages\MySQLdb\__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\MySQLdb\connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (1049, "Unknown database 'scaffold_stage'")
+2015-08-03 16:43:33,209 [Thread-8:8776] [django.request:224] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /m/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 88, in get_response
+    response = middleware_method(request)
+  File "D:/webhome/django_scaffold/scaffold\scaffold\common\midware_language_detect.py", line 40, in process_request
+    elif cookie_name in request.session.keys():
+  File "C:\Python27\lib\site-packages\django\contrib\sessions\backends\base.py", line 118, in keys
+    return self._session.keys()
+  File "C:\Python27\lib\site-packages\django\contrib\sessions\backends\base.py", line 173, in _get_session
+    self._session_cache = self.load()
+  File "C:\Python27\lib\site-packages\django\contrib\sessions\backends\db.py", line 20, in load
+    expire_date__gt=timezone.now()
+  File "C:\Python27\lib\site-packages\django\db\models\manager.py", line 151, in get
+    return self.get_queryset().get(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 304, in get
+    num = len(clone)
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 77, in __len__
+    self._fetch_all()
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 857, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 220, in iterator
+    for row in compiler.results_iter():
+  File "C:\Python27\lib\site-packages\django\db\models\sql\compiler.py", line 713, in results_iter
+    for rows in self.execute_sql(MULTI):
+  File "C:\Python27\lib\site-packages\django\db\models\sql\compiler.py", line 785, in execute_sql
+    cursor = self.connection.cursor()
+  File "C:\Python27\lib\site-packages\django\db\backends\__init__.py", line 160, in cursor
+    cursor = self.make_debug_cursor(self._cursor())
+  File "C:\Python27\lib\site-packages\django\db\backends\__init__.py", line 132, in _cursor
+    self.ensure_connection()
+  File "C:\Python27\lib\site-packages\django\db\backends\__init__.py", line 127, in ensure_connection
+    self.connect()
+  File "C:\Python27\lib\site-packages\django\db\utils.py", line 99, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "C:\Python27\lib\site-packages\django\db\backends\__init__.py", line 127, in ensure_connection
+    self.connect()
+  File "C:\Python27\lib\site-packages\django\db\backends\__init__.py", line 115, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "C:\Python27\lib\site-packages\django\db\backends\mysql\base.py", line 435, in get_new_connection
+    conn = Database.connect(**conn_params)
+  File "C:\Python27\lib\site-packages\MySQLdb\__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\MySQLdb\connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (1049, "Unknown database 'scaffold_stage'")
+2015-08-03 16:43:33,505 [Thread-9:12628] [django.request:224] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 88, in get_response
+    response = middleware_method(request)
+  File "D:/webhome/django_scaffold/scaffold\scaffold\common\midware_language_detect.py", line 40, in process_request
+    elif cookie_name in request.session.keys():
+  File "C:\Python27\lib\site-packages\django\contrib\sessions\backends\base.py", line 118, in keys
+    return self._session.keys()
+  File "C:\Python27\lib\site-packages\django\contrib\sessions\backends\base.py", line 173, in _get_session
+    self._session_cache = self.load()
+  File "C:\Python27\lib\site-packages\django\contrib\sessions\backends\db.py", line 20, in load
+    expire_date__gt=timezone.now()
+  File "C:\Python27\lib\site-packages\django\db\models\manager.py", line 151, in get
+    return self.get_queryset().get(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 304, in get
+    num = len(clone)
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 77, in __len__
+    self._fetch_all()
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 857, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 220, in iterator
+    for row in compiler.results_iter():
+  File "C:\Python27\lib\site-packages\django\db\models\sql\compiler.py", line 713, in results_iter
+    for rows in self.execute_sql(MULTI):
+  File "C:\Python27\lib\site-packages\django\db\models\sql\compiler.py", line 785, in execute_sql
+    cursor = self.connection.cursor()
+  File "C:\Python27\lib\site-packages\django\db\backends\__init__.py", line 160, in cursor
+    cursor = self.make_debug_cursor(self._cursor())
+  File "C:\Python27\lib\site-packages\django\db\backends\__init__.py", line 132, in _cursor
+    self.ensure_connection()
+  File "C:\Python27\lib\site-packages\django\db\backends\__init__.py", line 127, in ensure_connection
+    self.connect()
+  File "C:\Python27\lib\site-packages\django\db\utils.py", line 99, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "C:\Python27\lib\site-packages\django\db\backends\__init__.py", line 127, in ensure_connection
+    self.connect()
+  File "C:\Python27\lib\site-packages\django\db\backends\__init__.py", line 115, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "C:\Python27\lib\site-packages\django\db\backends\mysql\base.py", line 435, in get_new_connection
+    conn = Database.connect(**conn_params)
+  File "C:\Python27\lib\site-packages\MySQLdb\__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\MySQLdb\connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (1049, "Unknown database 'scaffold_stage'")
+2015-08-03 16:43:35,315 [Thread-10:7500] [django.request:224] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 88, in get_response
+    response = middleware_method(request)
+  File "D:/webhome/django_scaffold/scaffold\scaffold\common\midware_language_detect.py", line 40, in process_request
+    elif cookie_name in request.session.keys():
+  File "C:\Python27\lib\site-packages\django\contrib\sessions\backends\base.py", line 118, in keys
+    return self._session.keys()
+  File "C:\Python27\lib\site-packages\django\contrib\sessions\backends\base.py", line 173, in _get_session
+    self._session_cache = self.load()
+  File "C:\Python27\lib\site-packages\django\contrib\sessions\backends\db.py", line 20, in load
+    expire_date__gt=timezone.now()
+  File "C:\Python27\lib\site-packages\django\db\models\manager.py", line 151, in get
+    return self.get_queryset().get(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 304, in get
+    num = len(clone)
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 77, in __len__
+    self._fetch_all()
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 857, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 220, in iterator
+    for row in compiler.results_iter():
+  File "C:\Python27\lib\site-packages\django\db\models\sql\compiler.py", line 713, in results_iter
+    for rows in self.execute_sql(MULTI):
+  File "C:\Python27\lib\site-packages\django\db\models\sql\compiler.py", line 785, in execute_sql
+    cursor = self.connection.cursor()
+  File "C:\Python27\lib\site-packages\django\db\backends\__init__.py", line 160, in cursor
+    cursor = self.make_debug_cursor(self._cursor())
+  File "C:\Python27\lib\site-packages\django\db\backends\__init__.py", line 132, in _cursor
+    self.ensure_connection()
+  File "C:\Python27\lib\site-packages\django\db\backends\__init__.py", line 127, in ensure_connection
+    self.connect()
+  File "C:\Python27\lib\site-packages\django\db\utils.py", line 99, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "C:\Python27\lib\site-packages\django\db\backends\__init__.py", line 127, in ensure_connection
+    self.connect()
+  File "C:\Python27\lib\site-packages\django\db\backends\__init__.py", line 115, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "C:\Python27\lib\site-packages\django\db\backends\mysql\base.py", line 435, in get_new_connection
+    conn = Database.connect(**conn_params)
+  File "C:\Python27\lib\site-packages\MySQLdb\__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\MySQLdb\connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (1049, "Unknown database 'scaffold_stage'")
+2015-08-03 16:47:23,706 [Thread-8:8500] [django.request:143] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2015-08-03 16:58:20,040 [Thread-20:3288] [django.request:143] [base:get_response] [WARNING]- Not Found: /etc/static/images/logo_garena.png

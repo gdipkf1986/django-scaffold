@@ -1,0 +1,22 @@
+html, body {
+  min-height: 100%;
+  font-size: 14px;
+  margin: 0;
+  background-color: #ddd;
+  font-family: "Helvertica Neue", sans-serif, Arial; }
+
+h1, h2, h3, h4, h5, h6, p, ul, ol {
+  padding: 0;
+  margin: 0;
+  font-family: "Helvertica Neue", sans-serif, Arial; }
+
+#nav {
+  background-color: #000;
+  padding: 5px;
+  position: relative; }
+
+#icon_garena {
+  height: 25px;
+  margin: 5px; }
+
+/*# sourceMappingURL=mobile.css.map */

@@ -5,7 +5,7 @@ from scaffold import settings
 from django.utils import translation
 
 cookie_name = 'django_language'
-langReg = r'(?P<lang>(en\-PH|en\-MY|en|zh-TW|vi|id|th))'
+langReg = r'(?P<lang>(en\-PH|en\-MY|en|zh\-TW|zh\-CN|vi|id|th))'
 
 
 class LanguageMiddleware(object):

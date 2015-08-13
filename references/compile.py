@@ -154,7 +154,7 @@ def css_sprit():
                 output[sprite_file][description] = content
 
     for file_name, contents in output.iteritems():
-        fp = open(os.path.join(static_root, 'styles', file_name + '.css'), 'w')
+        fp = open(os.path.join(static_root, 'css', file_name + '.css'), 'w')
         for description, content in contents.iteritems():
             fp.writelines(description + '{')
             fp.writelines(content)
@@ -170,7 +170,7 @@ def convert_path():
 
 
 def get_css_files():
-    folder = os.path.join(BASEDIR, 'etc', 'static', 'styles')
+    folder = os.path.join(BASEDIR, 'etc', 'static', 'css')
     return [os.path.join(folder, f) for f in os.listdir(folder) if
             os.path.isfile(os.path.join(folder, f)) and f.endswith('.css')]
 
