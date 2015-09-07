@@ -1,1 +1,4 @@
 # This file contains common Python dependencies for all circumstances.
+rsa
+django_user_agents
+django-social-auth

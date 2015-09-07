@@ -52,3 +52,4 @@ scaffold/scaffold/common/
 	    'django.contrib.auth',
 	    ...
 	)
+

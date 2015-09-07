@@ -47,7 +47,7 @@ class LanguageMiddleware(object):
             translation.activate(language_code)
 
     def process_response(self, request, response):
-        cookie = request.COOKIES.get(cookie_name,False)
+        cookie = request.COOKIES.get(cookie_name, False)
         if not cookie or cookie != request.session.get(cookie_name):
             try:
                 response.set_cookie(cookie_name, request.session.get(cookie_name))
