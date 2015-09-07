@@ -176,14 +176,8 @@ bower_components/
 /requirements/local.txt
 /etc/static_collected/
 /etc/templates_collected/
-/etc/uploads/
+/etc/uploads/*
 /scaffold/my/
 /scaffold/spec/*/secret.py
 /scaffold/spec/local/
-/scaffold/log/
-
-###################
-## django
-###################
-.log
-/log/*.log
+/log/*
