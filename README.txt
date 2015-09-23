@@ -33,7 +33,7 @@ scaffold/scaffold/my/
 
 scaffold/scaffold/common/
 
-  This directory holds a special Django app which injects project-wise functionalities written by you.
+  This directory holds a special Django app which injects project-wise functionalities.
 
   Common usage:
 
