@@ -173,7 +173,7 @@ pip-log.txt
 dist/
 node_modules/
 bower_components/
-/requirements/local.txt
+/references/requirements/local.txt
 /etc/static_collected/
 /etc/templates_collected/
 /etc/uploads/*

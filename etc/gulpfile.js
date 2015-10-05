@@ -1,90 +1,89 @@
 /**
- * Created by Jovi on 10/5/2015.
- * 0. Run less or sass
- * 1. Optimize pics
- * 2. Generate css sprite
- * 3. Auto prefix in css
- * 4. Compact css and js and generate map.json
- * 5. uglify compacted files
- */
+ * 1. compile scss
+ * 2. compact css with sourcemap
+ * 3. compact js
+ * 4. minimize pics
+ * */
 
-var cfg = {
-    'src': 'static/'
-    , 'dist': 'dist/'
-};
+'use strict';
 
 var gulp = require('gulp');
+var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
-
-
-/*********************************************************/
-/** 1. Optimize pics **/
-var imagemin = require('gulp-imagemin');
-gulp.task('image', function () {
-    gulp.src(cfg.src + '/images/**/*.*')
-        .pipe(imagemin({progressive: true}))
-        .pipe(gulp.dest(cfg.dist + '/images'))
-});
-
-
-/*********************************************************/
-/** 4. compact css and js and generate map.json **/
-
-var uglify = require('gulp-uglify');
-var minifyCSS = require('gulp-minify-css');
-var less = require('gulp-less');
-var sass = require('gulp-ruby-sass');
-var prefix = require('gulp-autoprefixer');
+var template = require('gulp-template');
+var autoprefixer = require('gulp-autoprefixer');
 var concat = require('gulp-concat');
+var spritesmith = require('gulp.spritesmith');
+var imagemin = require('gulp-imagemin');
+var merge = require('merge-stream');
+var md5 = require('gulp-md5');
+var uglify = require('gulp-uglify');
+var babel = require('gulp-babel');
 
+gulp.task('sprite', function () {
+    var sprite_data = gulp.src('./static_resources/images/**/icon_*.{png,jpg}')
+        .pipe(spritesmith({
+            imgName: 'icons.png',
+            cssName: 'icons.scss',
+            imgPath: '../images/icons.png',
+            padding: 5
+        }));
 
+    var img_stream = sprite_data.img.pipe(imagemin())
+        .pipe(gulp.dest('./static/images/'));
 
-gulp.task('sass', function () {
-    return sass(cfg.src + '/sass/', {sourcemap: true})
-        .on('error', function (err) {
-            console.error('Error', err.message);
-        })
+    var css_stream = sprite_data.css
+        .pipe(gulp.dest('./static_resources/scss/')); // output scss for next step
 
-        .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest(cfg.src + '/css/'));
+    return merge(img_stream, css_stream);
 });
 
 
 
+gulp.task('scss', function () {
 
-gulp.task('css_scripts', function () {
-
-    gulp.src([cfg.src + '/scripts/*.js'])
+    var src = ['./static_resources/scss/variables.scss', './scss/base.scss', './scss/*.scss'];
+    gulp.src(src)
         .pipe(sourcemaps.init())
-        .pipe(concat('all.js'))
+        .pipe(concat('all.min.scss'))
+        //.pipe(template({'variable_name': variable_value})) // pass varilabes to scss
+        .pipe(sass.sync({includePaths: ['./scss/'], outputStyle: 'compressed'}).on('error', sass.logError))
+        .pipe(autoprefixer({browsers: ['> 1%', 'IE 7'], cascade: false}))
+        //.pipe(md5())  // need update template reference after rename css file with md5 tag.
+        .pipe(sourcemaps.write('.'))
+        .pipe(gulp.dest('./static/css'))
+
+});
+
+
+
+gulp.task('js', function () {
+    gulp.src('./static_resoures/js/*.js')
+        .pipe(sourcemaps.init())
+        .pipe(concat('all.min.js'))
+        //.pipe(babel()) // enable this if you are need transfer es6 to es5
         .pipe(uglify())
         .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest(cfg.dist + '/scripts/'));
-
-    gulp.src([cfg.src + "/css/**/*.css", '!'+cfg.src+'/css/site.css'])
-        .pipe(sourcemaps.init())
-        .pipe(concat('all.css'))
-        .pipe(prefix("last 1 version", "> 1%", "ie 8", "ie 7"))
-        .pipe(minifyCSS())
-        .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest(cfg.dist + '/css/'));
-
+        .pipe(gulp.dest('./static/js'))
 });
 
 
-/***********************************************************************/
 
-
-gulp.on('stop', function () {
-    process.nextTick(function () {
-        process.exit(0);
-    });
-});
-
-gulp.task('auto', function () {
-    gulp.watch(cfg.src + '/scripts/*.js', ['css_scripts'])
+gulp.task('watch', function () {
+    console.log('watching scss files');
+    gulp.watch('./scss/*.scss', ['scss']);
+    gulp.watch('./js/*.js', ['js'])
 });
 
 
-//gulp.task('default', ['script', 'auto']);
-gulp.task('default', ['sass', 'css_scripts', 'image']);
+gulp.task('dev', ['sprite', 'watch']);
+gulp.task('prod', ['sprite', 'scss', 'js']);
+
+gulp.task('default', function () {
+    var argv = require('yargs').argv;
+    if (argv.dev) {
+        gulp.run('dev');
+    } else {
+        gulp.run('prod');
+    }
+});
